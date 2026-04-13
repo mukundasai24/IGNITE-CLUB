@@ -143,3 +143,29 @@ document.addEventListener('DOMContentLoaded', () => {
         panel.style.transition = 'transform 0.1s linear';
     });
 });
+// OLD CODE (lines 46-61):
+fetch("https://formsubmit.co/ajax/mukundeswarasai2007@gmail.com", {
+    method: "POST",
+    headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({...})
+})
+
+// NEW CODE:
+fetch("http://localhost:3000/api/register", {  // Or your deployed server URL
+    method: "POST",
+    headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        name: formEntries.name,
+        rollNumber: formEntries.rollNumber,
+        department: formEntries.department,
+        domain: formEntries.domain,
+        email: formEntries.email,
+        events: formEntries.events
+    })
+})
