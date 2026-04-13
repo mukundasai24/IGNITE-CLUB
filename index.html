@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Student Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Abstract 3D-like Glowing Background -->
+    <div class="glow-container">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+        <div class="glow-orb orb-4"></div>
+    </div>
+
+    <div class="main-container">
+        <div class="glass-panel">
+            <div class="panel-inner">
+                <div class="decorative-line"></div>
+
+                <div class="form-header stagger-item">
+                    <span class="badge">IGNITE CLUB</span>
+                    <h1>Student Portal</h1>
+                    <p>Begin your journey with us. Fill in your details below to register securely.</p>
+                </div>
+
+                <form id="registrationForm" class="stagger-group">
+                    <div class="input-group stagger-item">
+                        <input type="text" id="name" name="name" class="floating-input" placeholder=" " required>
+                        <label for="name" class="floating-label">Full Name</label>
+                        <div class="input-border"></div>
+                    </div>
+
+                    <div class="input-group stagger-item">
+                        <input type="text" inputmode="numeric" pattern="[0-9]{8}" minlength="8" maxlength="8"
+                            title="Roll number must be exactly 8 digits" id="rollNumber" name="rollNumber"
+                            class="floating-input" placeholder=" " required>
+                        <label for="rollNumber" class="floating-label">Roll Number</label>
+                        <div class="input-border"></div>
+                    </div>
+
+                    <div class="input-group stagger-item">
+                        <select id="department" name="department" class="floating-select" required>
+                            <option value="" disabled selected></option>
+                            <option value="cse">Computer Science (CSE)</option>
+                            <option value="ece">Electronics (ECE)</option>
+                            <option value="eee">Electrical (EEE)</option>
+                            <option value="mech">Mechanical</option>
+                            <option value="civil">Civil</option>
+                            <option value="chem">Chemical</option>
+                            <option value="cse-self">CSE (Self Supporting)</option>
+                        </select>
+                        <label for="department" class="floating-label active-label">Department</label>
+                        <div class="select-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </div>
+                        <div class="input-border"></div>
+                    </div>
+
+                    <div class="input-group stagger-item">
+                        <input type="text" id="domain" name="domain" class="floating-input" placeholder=" " required>
+                        <label for="domain" class="floating-label">Interested Domain (e.g. AI, Web)</label>
+                        <div class="input-border"></div>
+                    </div>
+
+                    <div class="input-group stagger-item">
+                        <input type="email" id="email" name="email" class="floating-input" placeholder=" " required>
+                        <label for="email" class="floating-label">Email Address</label>
+                        <div class="input-border"></div>
+                    </div>
+
+                    <div class="input-group stagger-item">
+                        <input type="text" id="events" name="events" class="floating-input" placeholder=" " required>
+                        <label for="events" class="floating-label">Events & Workshops of Interest</label>
+                        <div class="input-border"></div>
+                    </div>
+
+                    <button type="submit" class="glow-button stagger-item">
+                        <span class="btn-text">Complete Registration</span>
+                        <div class="btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </div>
+                        <div class="btn-glow"></div>
+                    </button>
+                </form>
+
+                <div id="successMessage" class="success-state hidden">
+                    <div class="success-animation">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                        </svg>
+                    </div>
+                    <h2>Registration Complete!</h2>
+                    <p>Your details have been securely recorded. Please check your email for the next steps.</p>
+                    <button type="button" id="resetBtn" class="secondary-button">Register Another Student</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
